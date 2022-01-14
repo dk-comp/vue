@@ -1,0 +1,138 @@
+@mixin contacts
+  justify-content: flex-end
+  display: flex
+  flex-wrap: wrap
+  font-size: 12px
+  font-weight: 700
+  margin-bottom: $defaultMargin
+
+  @media (max-width: 768px)
+    flex-wrap: nowrap
+    flex-direction: column
+    align-items: flex-end
+
+  > *
+    margin-left: 30px
+  > .phone
+    color: $mainGray
+
+  > .email
+    color: $mainRed
+    text-decoration: underline
+    cursor: pointer
+
+@mixin social-icons
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  height: 20px
+  margin-left: 20px
+  > *
+    width: 20px
+  & :not(:last-child)
+    margin-right: $defaultMargin
+
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin red-link-with-arrow
+  color: $mainRed
+  font-size: 11px
+  font-weight: 700
+  text-decoration: underline
+  display: flex
+  align-items: center
+  margin-top: 16px
+  flex-wrap: nowrap
+  cursor: pointer
+
+  & :not(:last-child)
+    margin-right: 5px
+
+@mixin button-focus-none
+  border: none
+  border-radius: 0
+  &:focus
+    outline: none !important
+    border: none !important
+    box-shadow: none !important
+
+@mixin ms-centering
+  @media all and (-ms-high-contrast: none)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin ms-vertical-centering
+  @media all and (-ms-high-contrast: none)
+    top: 50%
+    transform: translate(0%, -50%)
+
+@mixin ms-horizontal-centering
+  @media all and (-ms-high-contrast: none)
+    left: 50%
+    transform: translate(-50%, 0%)
+
+@mixin block-centering
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin block-vertical-centering
+  top: 50%
+  transform: translate(0%, -50%)
+
+@mixin block-horizontal-centering
+  left: 50%
+  transform: translate(-50%, 0%)
+@mixin popup
+  .absolute
+    display: none
+  &:hover
+    @media (min-width: 1087px)
+      .absolute
+        display: block
+        background-color: transparent
+        height: 50%
+        position: absolute
+        width: 70px
+        top: 0
+  .popup-text
+    visibility: hidden
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.28)
+    background-color: #fff
+    padding: 16px 20px
+    position: absolute
+    z-index: 1
+    top: 30px
+    color: #393939
+    font-size: 13px
+    font-weight: 400
+    .close
+      position: absolute
+      top: 10px
+      right: 10px
+      cursor: pointer
+    &::after
+      content: ""
+      position: absolute
+      transform: rotate(180deg)
+      margin-left: -5px
+      border-width: 5px
+      border-style: solid
+      border-color: #fff transparent transparent transparent
+  .show
+    visibility: visible
+    -webkit-animation: fadeIn .5s
+    animation: fadeIn .5s
+
+    + .popup-arrow
+      top: 21px
+      z-index: 2
+      content: ""
+      position: absolute
+      transform: rotate(180deg)
+      border: 5px solid transparent
+      border-top-color: #fff

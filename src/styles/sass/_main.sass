@@ -1,0 +1,212 @@
+.is-main-green
+  background-color: $mainGreen
+  border-color: transparent
+  color: white
+
+// customize buefy styles
+
+.input:focus, .taginput,
+.taginput-container.is-focusable:focus,
+.input.is-focused, .taginput .is-focused.taginput-container.is-focusable,
+.input:active, .taginput .taginput-container.is-focusable:active,
+.input.is-active, .taginput .is-active.taginput-container.is-focusable,
+.textarea:focus, .textarea.is-focused, .textarea:active, .textarea.is-active
+  border-color: $mainGreen !important
+  box-shadow: 0 0 0 0.125em rgba(59, 174, 138, 0.25) !important
+
+.button:focus:not(:active), .button.is-focused:not(:active)
+  webkit-box-shadow: 0 0 0 0.125em rgba(59, 174, 138, 0.25) !important
+  box-shadow: 0 0 0 0.125em rgba(59, 174, 138, 0.25) !important
+
+.button:focus, .button.is-focused
+  border-color: $mainGreen !important
+  color: white !important
+
+.button:hover, .button.is-hovered
+  border-color: #b5b5b5
+  color: white !important
+// customize vue carousel
+.VueCarousel-pagination
+  position: absolute !important
+  bottom: 20px !important
+
+.field
+  .checkbox:hover, .radio:hover
+    color: $mainRed
+
+  .b-checkbox.checkbox input[type=checkbox] + .check
+    width: 16px
+    height: 16px
+    border-radius: 0
+    border: 1px solid #b1b1b1
+
+  .b-checkbox.checkbox:hover input[type=checkbox] + .check
+    border-color: #b1b1b1
+
+  .b-checkbox.checkbox input[type=checkbox]:checked + .check
+    background: white url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath fill='%23ff4949' d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3e%3c/svg%3e") no-repeat center center
+    background-size: contain
+    border-color: #b1b1b1
+
+  .b-checkbox.checkbox input[type=checkbox]:checked + .control-label
+    color: $mainRed
+
+  .b-checkbox.checkbox:focus input[type=checkbox]:checked + .check
+    box-shadow: 0 0 0.5em #b1b1b1
+
+  &.radio-style
+    .b-checkbox.checkbox
+      align-items: flex-start
+
+    .check
+      margin-top: 3px
+
+    .b-checkbox.checkbox input[type=checkbox] + .check
+      border: 2px solid #919191
+      border-radius: 50%
+
+    .b-checkbox.checkbox input[type=checkbox]:checked ~ span
+      color: $mainRed
+
+    .b-checkbox.checkbox input[type=checkbox]:checked + .check
+      background-repeat: no-repeat
+      background-position: center center
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAbElEQVQoU2NkYGBgOG5hocD4718/AwODAYjPwMBw4T8TU6HliRMPGKGS5xkYGASgkjDqw38mJkPGE2ZmGxgYGPzRJGHcjSAFHxgYGPhxKHhASMFDwlZAHXkBizUf/zMxGTAieXMCmjcLQN4EADTKKqaHg8e3AAAAAElFTkSuQmCC")
+      background-color: white
+      background-size: 8px 8px
+      border-color: #b1b1b1
+
+    .b-checkbox.checkbox input[type=checkbox]:checked + .control-label
+      color: $mainRed
+
+    .b-checkbox.checkbox:focus input[type=checkbox]:checked + .check
+      box-shadow: 0 0 0.5em #b1b1b1
+
+    &.dark
+      .b-checkbox.checkbox
+        align-items: flex-start
+
+      .b-checkbox.checkbox input[type=checkbox] + .check
+        background-color: white
+        border: 3px solid #d3d3d3
+        width: 18px
+        height: 18px
+
+      .b-checkbox.checkbox input[type=checkbox]:checked + .check
+
+        background-repeat: no-repeat
+        background-position: center
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='10' viewBox='0 0 10 10'%3e%3cdefs%3e%3cpath id='tpiya' d='M988 263a5 5 0 1 1 0 10 5 5 0 0 1 0-10z'/%3e%3c/defs%3e%3cg%3e%3cg transform='translate(-983 -263)'%3e%3cuse fill='%23ff4949' xlink:href='%23tpiya'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e")
+        background-color: white
+        background-size: 8px 8px
+        border: 3px solid #3b3b3b
+
+      .b-checkbox.checkbox input[type=checkbox]:checked + .control-label
+        color: $mainRed
+
+      .b-checkbox.checkbox:focus input[type=checkbox]:checked + .check
+        box-shadow: 0 0 0.5em #b1b1b1
+
+  .b-radio.radio input[type=radio] + .check
+    border: 1px solid #9f9fa0
+
+    &::before
+      background-color: $mainRed
+      width: 70%
+      height: 70%
+
+  .b-radio.radio input[type=radio]:checked + .check
+    border-color: #9f9fa0
+
+  .b-radio.radio:hover input[type=radio] + .check
+    border-color: #9f9fa0
+
+  .b-radio.radio:focus input[type=radio]:checked + .check
+    -webkit-box-shadow: 0 0 0.5em #b1b1b1
+    box-shadow: 0 0 0.5em #b1b1b1
+
+.datepicker-container
+  font-family: "Proxima Nova - Semi Bold", sans-serif !important
+
+  .pagination-next
+    border-radius: 0
+    border: 1px solid #565656
+    position: relative
+
+    &:focus
+      border: 1px solid #565656 !important
+
+    &::after
+      content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAAY0lEQVQYV2MU4BVdwPCPYcKHr68vMEABowC3qAED4/8FDP8ZE2ASjCBJAQEBAYY/LBsYGP9P+PD57QawIJLEAQYGhvXogvsZGBg2ompnYGj48OXNAYhFTP83MPxjDIBbhM1JAGBRLGiZo7knAAAAAElFTkSuQmCC")
+      position: absolute
+      @include block-centering
+
+  .pagination-previous
+    position: relative
+    border-radius: 0
+    border: 1px solid #565656
+
+    &:focus
+      border: 1px solid #565656 !important
+
+    &::after
+      content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAAT0lEQVQYV2NkQAIC3KIGDEwMBYwwMbAA4/8FDP8ZE8CCArzCAQz/GQsYWP4EfPjw4QOjAI9IAwMDQwADyx8HkABIEXZBrNpxWoQiwcRQAADAwCJtNOZiUAAAAABJRU5ErkJggg==")
+      position: absolute
+      @include block-centering
+
+  .select select:focus, .select select.is-focused, .select select:active, .select select.is-active
+    border-color: $mainGreen
+    -webkit-box-shadow: 0 0 0 0.125em rgba(59, 174, 138, 0.5)
+    box-shadow: 0 0 0 0.125em rgba(59, 174, 138, 0.5)
+
+
+  .select:not(.is-multiple):not(.is-loading)::after
+    border-color: #565656
+
+  .pagination-previous:focus, .pagination-next:focus, .pagination-link:focus
+    border-color: $mainGreen
+
+  .datepicker .datepicker-table .datepicker-cell
+    border-radius: 0
+
+  .datepicker .datepicker-table .datepicker-body .datepicker-row .datepicker-cell.is-today
+    border: solid 1px rgba(59, 174, 138, 0.5)
+
+  .datepicker .datepicker-table .datepicker-body .datepicker-row .datepicker-cell.is-selected
+    background-color: $mainGreen
+
+  .datepicker-body
+    font-family: "Proxima Nova Rg", sans-serif !important
+
+  body,
+  button,
+  input,
+  select,
+  textarea
+    border-radius: 0 !important
+    border: 1px solid #565656 !important
+    font-family: "Proxima Nova - Semi Bold", sans-serif !important
+
+  .dropdown-menu
+    left: auto
+    right: 0
+
+    .dropdown-content
+      border-radius: 0
+      border: 1px solid #565656
+
+  .input
+    border-radius: 0
+    border: 1px solid #565656
+    background-color: #ffffff
+    padding-left: 5px !important
+    color: #565656
+    font-family: "Proxima Nova - Semi Bold", sans-serif
+    font-size: 14px
+    font-weight: 400
+    text-align: center
+
+    &:focus
+      border: 1px solid #565656 !important
+      outline: none !important
+      box-shadow: none !important
